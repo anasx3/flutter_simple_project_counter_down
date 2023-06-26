@@ -32,12 +32,12 @@ class _CounterDownAppState extends State<CounterDownApp> {
   Timer? repeatedFunction;
 
   startTimer() {
-    repeatedFunction = Timer.periodic(Duration(seconds: 1), (qqqqqq) {
+    repeatedFunction = Timer.periodic(Duration(seconds: 1), (Timer) {
       setState(() {
         if (numberOfSeconds > 0) {
           numberOfSeconds--;
         } else {
-          qqqqqq.cancel();
+          Timer.cancel();
         }
       });
     });
